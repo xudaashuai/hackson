@@ -57,10 +57,14 @@ const data3 = {
 
 const MainContent = () => (
   <div className="content">
-    <ContentPieChart data={data1} />
-    <ContentPieChart data={data2} />
-    <ContentPieChart data={data3} />
-    <Switch onSwitch={ (a) => console.log(a)}/>
+    <div className="content-item">
+      <ContentPieChart data={data1} />
+      <ContentPieChart data={data2} />
+      <ContentPieChart data={data3} />
+      <div style={{ position: 'absolute', right: '0' }}>
+        <Switch onSwitch={a => console.log(a)} />
+      </div>
+    </div>
   </div>
 );
 export default MainContent;
