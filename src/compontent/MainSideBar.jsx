@@ -1,6 +1,5 @@
 import React from 'react';
-import '../style/MainSideBar.css';
 
-const MainSideBar = () => (<div>sidebar</div>);
+const MainSideBar = () => (<div className="sidebar">sidebar</div>);
 
 export default MainSideBar;

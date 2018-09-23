@@ -12,7 +12,29 @@
       background-color: #ccc;
       flex-direction: row;
     }
+
   }
+
+}
+
+.header {
+  .row();
+  .card();
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+  .search{
+    align-items: stretch;
+    justify-content: center;
+  }
+  input, select {
+    .card();
+  }
+
 }
 
 /*
@@ -27,9 +49,8 @@
     --light: #eee;
 }
 
-* + *{
+*{
     box-sizing: border-box;
-    margin: .5em 0;
 }
 
 @media(min-width:35em) {
