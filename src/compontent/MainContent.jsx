@@ -1,5 +1,7 @@
 import React from 'react';
 import ContentPieChart from './ContentPieChart';
+import Switch from './Switch';
+
 
 const data1 = {
   option: [
@@ -14,6 +16,7 @@ const data1 = {
   option2: ['55%', '80%'],
   option3: [0, '40%'],
   option4: ['#a6b6d7', '#e1bfc8', '#f1ebed', '#d2b8bf', '#efd4db'],
+  show: true,
 };
 const data2 = {
   option: [
@@ -31,6 +34,7 @@ const data2 = {
   option2: ['45%', '60%'],
   option3: [0, '32%'],
   option4: ['#e1c6bf', '#d59a9a', '#cebfe1', '#e4aacd', '#f6c9d4'],
+  show: false,
 };
 const data3 = {
   option: [
@@ -48,6 +52,7 @@ const data3 = {
   option2: ['45%', '60%'],
   option3: [0, '32%'],
   option4: ['#e1c6bf', '#d59a9a', '#cebfe1', '#e4aacd', '#f6c9d4'],
+  show: false,
 };
 
 const MainContent = () => (
@@ -55,6 +60,7 @@ const MainContent = () => (
     <ContentPieChart data={data1} />
     <ContentPieChart data={data2} />
     <ContentPieChart data={data3} />
+    <Switch onSwitch={ (a) => console.log(a)}/>
   </div>
 );
 export default MainContent;

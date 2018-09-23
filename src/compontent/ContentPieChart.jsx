@@ -9,6 +9,16 @@ export default class ContentPieChart extends Component {
     const myChart = echarts.init(this.c);
     const unit = '%';
     myChart.setOption({
+      title: {
+        show: data.show,
+        text: '药品支出详细分析',
+        textStyle: {
+          color: 'rgba(0,0,0,.65)',
+          fontSize: '18',
+          fontWeight: 'normal',
+          fontFamily: 'Microsoft YaHei',
+        },
+      },
       tooltip: {
         show: false,
         trigger: 'item',
