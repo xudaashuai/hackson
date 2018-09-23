@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter,
+  Route,
 } from 'react-router-dom';
 import MainHeader from './compontent/MainHeader';
 import MainSideBar from './compontent/MainSideBar';
@@ -11,10 +12,10 @@ import './App.less';
 function App() {
   return (
     <div className="container">
-      <MainHeader />
+      <Route path="/" component={MainHeader} />
       <div className="content-container">
-        <MainSideBar />
-        <MainContent />
+        <Route path="/" component={MainSideBar} />
+        <Route exact path="/" component={MainContent} />
       </div>
     </div>
   );
