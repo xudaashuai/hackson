@@ -67,10 +67,14 @@ class MainContent extends React.Component {
     const { isRate } = this.state;
     return (
       <div className="content">
-        <ContentPieChart data={data1} isRate={isRate} />
-        <ContentPieChart data={data2} isRate={isRate} />
-        <ContentPieChart data={data3} isRate={isRate} />
-        <Switch onSwitch={(actived) => { this.setState({ isRate: actived }); }} />
+        <div className="content-item">
+          <ContentPieChart data={data1} isRate={isRate} />
+          <ContentPieChart data={data2} isRate={isRate} />
+          <ContentPieChart data={data3} isRate={isRate} />
+          <div style={{ position: 'absolute', right: '0' }}>
+            <Switch onSwitch={(actived) => { this.setState({ isRate: actived }); }} />
+          </div>
+        </div>
       </div>
     );
   }

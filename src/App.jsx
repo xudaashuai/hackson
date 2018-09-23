@@ -4,6 +4,8 @@ import {
   BrowserRouter,
   Route,
 } from 'react-router-dom';
+
+import Switch from './compontent/Switch';
 import MainHeader from './compontent/MainHeader';
 import MainSideBar from './compontent/MainSideBar';
 import MainContent from './compontent/MainContent';
@@ -16,6 +18,7 @@ function App() {
       <div className="content-container">
         <Route path="/" component={MainSideBar} />
         <Route exact path="/" component={MainContent} />
+
       </div>
     </div>
   );

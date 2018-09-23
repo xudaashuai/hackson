@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style/Switch.less';
 
 export default class Switch extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class Switch extends Component {
     this.setState({
       actived: false,
     });
-    this.props.onSwitch(actived);
+    this.props.onSwitch(false);
   }
 
   open() {
@@ -30,26 +31,26 @@ export default class Switch extends Component {
     this.setState({
       actived: true,
     });
-    this.props.onSwitch(actived);
+    this.props.onSwitch(true);
   }
 
   render() {
     const { actived } = this.state;
     return (
-      <div style={{ position: 'absolute', right: '0' }}>
-        <div
+      <span className="switch-container">
+        <span
           onClick={this.close}
-          style={{ display: 'inline-block', backgroundColor: actived ? 'blue' : 'red' }}
+          className={!actived && 'switch-item-active'}
         >
           占比
-        </div>
-        <div
+        </span>
+        <span
           onClick={this.open}
-          style={{ display: 'inline-block', backgroundColor: actived ? 'red' : 'blue' }}
+          className={actived && 'switch-item-active'}
         >
           金额
-        </div>
-      </div>
+        </span>
+      </span>
     );
   }
 }
