@@ -13,9 +13,7 @@
       background-color: #ccc;
       flex-direction: row;
     }
-
   }
-
 }
 
 .header {
@@ -24,21 +22,40 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  padding: 0.5rem;
+
   & > * {
     display: flex;
     align-items: center;
   }
-  .search{
+
+  .search {
     align-items: stretch;
     justify-content: center;
+    input{
+      width: 300px;
+      padding: 0.5rem;
+
+    }
   }
-  input, select {
+
+  input,
+  select {
     .card();
   }
-
 }
 
-.content{
+.sidebar {
+  .card();
+  padding: 1rem;
+
+  & > * {
+    font-weight: bold;
+    margin: 1rem;
+  }
+}
+
+.content {
   flex: 1;
 }
 /*
@@ -46,123 +63,127 @@
 * Primary Color set to: #FA0
 * Font set to: Nunito
 */
-
 :root {
-    --font: nunito;
-    --primary-color: #fa0;
-    --light: #eee;
+  --font: nunito;
+  --primary-color: #fa0;
+  --light: #eee;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-
 @media(min-width:35em) {
-    .col {
-        display: table-cell;
-    }
-    .\31 {
-        width: 5%;
-    }
-    .\33 {
-        width: 22%;
-    }
-    .\34 {
-        width: 30%;
-    }
-    .\35 {
-        width: 40%;
-    }
-    .\32 {
-        width: 15%;
-    }
-    .row {
-        display: table;
-        border-spacing: 1em 0;
-    }
+  .col {
+    display: table-cell;
+  }
+
+  .\31 {
+    width: 5%;
+  }
+
+  .\33 {
+    width: 22%;
+  }
+
+  .\34 {
+    width: 30%;
+  }
+
+  .\35 {
+    width: 40%;
+  }
+
+  .\32 {
+    width: 15%;
+  }
+
+  .row {
+    display: table;
+    border-spacing: 1em 0;
+  }
 }
 
-.w-100,
-.row {
-    width: 100%;
+.row,
+.w-100 {
+  width: 100%;
 }
 
 .card:focus,
 hr {
-    outline: 0;
-    border: solid var(--primary-color);
+  outline: 0;
+  border: solid var(--primary-color);
 }
 
 .card,
 pre {
-    padding: 1em;
-    border: solid var(--light);
+  padding: 1em;
+  border: solid var(--light);
 }
 
-a:hover,
-.btn:hover {
-    opacity: .6;
+.btn:hover,
+a:hover {
+  opacity: 0.6;
 }
 
 .c {
-    max-width: 60em;
-    padding: 1em;
-    margin: auto;
-    font: 1em/1.6 var(--font);
+  max-width: 60em;
+  padding: 1em;
+  margin: auto;
+  font: 1em/1.6 var(--font);
 }
 
 h6 {
-    font: 300 1em var(--font);
+  font: 300 1em var(--font);
 }
 
 h5 {
-    font: 300 1.2em var(--font);
+  font: 300 1.2em var(--font);
 }
 
 h3 {
-    font: 300 2em var(--font);
+  font: 300 2em var(--font);
 }
 
 h4 {
-    font: 300 1.5em var(--font);
+  font: 300 1.5em var(--font);
 }
 
 h2 {
-    font: 300 2.2em var(--font);
+  font: 300 2.2em var(--font);
 }
 
 h1 {
-    font: 300 2.5em var(--font);
+  font: 300 2.5em var(--font);
 }
 
 a {
-    color: var(--primary-color);
-    text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .btn.primary {
-    color: white;
-    background: var(--primary-color);
-    border: solid var(--primary-color);
+  color: white;
+  background: var(--primary-color);
+  border: solid var(--primary-color);
 }
 
 pre {
-    overflow: auto;
+  overflow: auto;
 }
 
 td,
 th {
-    padding: 1em;
-    text-align: left;
-    border-bottom: solid var(--light);
+  padding: 1em;
+  text-align: left;
+  border-bottom: solid var(--light);
 }
 
 .btn {
-    padding: 1em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    background: white;
-    border: solid;
-    font: .7em var(--font);
-    cursor:pointer;
+  padding: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: white;
+  border: solid;
+  font: 0.7em var(--font);
+  cursor: pointer;
 }

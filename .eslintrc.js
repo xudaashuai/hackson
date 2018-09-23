@@ -5,4 +5,8 @@ module.exports = {
     "node": true,
     "jasmine": true
   },
+  "rules": {
+    "semi": 2,
+    "react/prop-types": 0
+  }
 };
