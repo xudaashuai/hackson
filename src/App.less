@@ -47,15 +47,19 @@
 .sidebar {
   .card();
   padding: 1rem;
-
+  flex-shrink: 0;
   & > * {
     font-weight: bold;
     margin: 1rem;
+      color: var(--primary-color);
+  }
+  .active {
+    color: black;
   }
 }
 
 .content {
-  flex: 1;
+  flex-grow: 1;
 }
 /*
 * Lit v0.1
