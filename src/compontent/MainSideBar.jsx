@@ -4,18 +4,12 @@ function MainSideBar(props) {
   const { a } = props;
   return (
     <div className="sidebar">
-      <div>
-        {a}
-      </div>
-      <div>
-        Item2
-      </div>
-      <div>
-        Item3
-      </div>
-      <div>
-        Item4
-      </div>
+      <div className="active">运营总览</div>
+      <div>指标</div>
+      <div>专题</div>
+      <div>报表</div>
+      <div>即席工具</div>
+      <div>权限管理</div>
     </div>
   );
 }
