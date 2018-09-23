@@ -5,6 +5,7 @@ import 'echarts/lib/chart/pie';
 
 export default class ContentPieChart extends Component {
   componentDidMount() {
+    const { data } = this.props;
     const myChart = echarts.init(this.c);
     const unit = '%';
     myChart.setOption({
@@ -19,13 +20,13 @@ export default class ContentPieChart extends Component {
         x: 'left',
         // data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
       },
-      color: this.props.data.option4,
+      color: data.option4,
       series: [
         {
           name: '药品支出详细分析',
           type: 'pie',
           startAngle: 270,
-          radius: this.props.data.option2,
+          radius: data.option2,
           avoidLabelOverlap: false,
           label: {
             normal: {
@@ -47,13 +48,13 @@ export default class ContentPieChart extends Component {
               show: false,
             },
           },
-          data: this.props.data.option,
+          data: data.option,
         },
         {
           name: '药品支出详细分析',
           type: 'pie',
           startAngle: 270,
-          radius: this.props.data.option3,
+          radius: data.option3,
           avoidLabelOverlap: false,
           label: {
             normal: {
@@ -75,7 +76,7 @@ export default class ContentPieChart extends Component {
               show: false,
             },
           },
-          data: this.props.data.option1,
+          data: data.option1,
         },
       ],
     });
@@ -83,6 +84,6 @@ export default class ContentPieChart extends Component {
 
   render() {
     // eslint-disable-next-line no-return-assign
-    return (<div ref={c => this.c = c} style={{ flex: '1', height: '200px' }} />);
+    return (<div ref={c => this.c = c} style={{ flex: '1' }} />);
   }
 }
