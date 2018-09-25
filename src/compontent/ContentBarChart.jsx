@@ -7,7 +7,6 @@ export default class ContentBarChart extends Component {
   componentDidMount() {
     const myChart1 = echarts.init(this.b);
     myChart1.setOption({
-      backgroundColor: '#f7f8fc',
       title: {
         text: '药品支出趋势',
 
@@ -220,6 +219,6 @@ export default class ContentBarChart extends Component {
 
   render() {
     // eslint-disable-next-line no-return-assign
-    return (<div ref={b => this.b = b} style={{ height: '450px', width: '100%' }} />);
+    return (<div ref={b => this.b = b} style={{ width: '100%' }} />);
   }
 }

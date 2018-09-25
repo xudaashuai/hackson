@@ -60,14 +60,22 @@
 
 .content {
   flex-grow: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
   .content-item{
+    position: relative;
+    margin: 0.5rem;
+    .card();
+    border-radius: 1rem;
     display: flex;
     & > * {
       flex: 1;
     }
     height: 400px;
+    &:hover{
+      box-shadow: 0 0 1rem 0 #777;
+    }
   }
 }
 /*
